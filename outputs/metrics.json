@@ -1,0 +1,133 @@
+{
+  "overall": {
+    "Final: DC + Omega + cat": {
+      "AUC": 0.7533418863245274,
+      "suppression": 0.5124329595319356,
+      "yield_fraction": 0.7,
+      "recall": 0.658703071672355,
+      "FPR": 0.26959791726930865,
+      "FNR": 0.341296928327645,
+      "precision": 0.17155555555555554,
+      "accuracy": 0.7248,
+      "flips_caught": 386,
+      "flips_total": 586
+    },
+    "DC + cat": {
+      "AUC": 0.7593425961668515,
+      "suppression": 0.5075572891272551,
+      "yield_fraction": 0.7,
+      "recall": 0.6552901023890785,
+      "FPR": 0.26988718542088513,
+      "FNR": 0.3447098976109215,
+      "precision": 0.17066666666666666,
+      "accuracy": 0.7242666666666666,
+      "flips_caught": 384,
+      "flips_total": 586
+    },
+    "Omega + cat": {
+      "AUC": 0.67093995365786,
+      "suppression": 0.33690882496343244,
+      "yield_fraction": 0.7,
+      "recall": 0.5358361774744027,
+      "FPR": 0.2800115707260631,
+      "FNR": 0.4641638225255973,
+      "precision": 0.13955555555555554,
+      "accuracy": 0.7056,
+      "flips_caught": 314,
+      "flips_total": 586
+    },
+    "Cat size only": {
+      "AUC": 0.6665389806111358,
+      "suppression": 0.31740614334470985,
+      "yield_fraction": 0.7,
+      "recall": 0.5221843003412969,
+      "FPR": 0.28116864333236913,
+      "FNR": 0.4778156996587031,
+      "precision": 0.136,
+      "accuracy": 0.7034666666666667,
+      "flips_caught": 306,
+      "flips_total": 586
+    },
+    "Final: training tuning": {
+      "AUC": 0.7655562455503178,
+      "suppression": 0.5616024187452758,
+      "yield_fraction": 0.7,
+      "recall": 0.6931216931216931,
+      "FPR": 0.28531910689587037,
+      "FNR": 0.30687830687830686,
+      "precision": 0.08317460317460318,
+      "accuracy": 0.7139047619047619,
+      "flips_caught": 262,
+      "flips_total": 378
+    },
+    "Final: held-out training": {
+      "AUC": 0.7896000309199103,
+      "suppression": 0.6184560780834072,
+      "yield_fraction": 0.7,
+      "recall": 0.7329192546583851,
+      "FPR": 0.28393639087347317,
+      "FNR": 0.26708074534161486,
+      "precision": 0.0874074074074074,
+      "accuracy": 0.7166666666666667,
+      "flips_caught": 118,
+      "flips_total": 161
+    }
+  },
+  "validation_by_cat": {
+    "2.0": {
+      "AUC": 0.581124971555059,
+      "suppression": 0.14940021810250814,
+      "yield_fraction": 0.7,
+      "recall": 0.40458015267175573,
+      "FPR": 0.26287262872628725,
+      "FNR": 0.5954198473282443,
+      "precision": 0.35333333333333333,
+      "accuracy": 0.65,
+      "flips_caught": 53,
+      "flips_total": 131
+    },
+    "2.5": {
+      "AUC": 0.6420967564925023,
+      "suppression": 0.3046776232616941,
+      "yield_fraction": 0.7,
+      "recall": 0.5132743362831859,
+      "FPR": 0.27282976324689967,
+      "FNR": 0.48672566371681414,
+      "precision": 0.19333333333333333,
+      "accuracy": 0.703,
+      "flips_caught": 58,
+      "flips_total": 113
+    },
+    "3.0": {
+      "AUC": 0.6690612653358287,
+      "suppression": 0.3282312925170069,
+      "yield_fraction": 0.7,
+      "recall": 0.5297619047619048,
+      "FPR": 0.2789301310043668,
+      "FNR": 0.47023809523809523,
+      "precision": 0.14833333333333334,
+      "accuracy": 0.705,
+      "flips_caught": 89,
+      "flips_total": 168
+    },
+    "3.5": {
+      "AUC": 0.7227334450913592,
+      "suppression": 0.4991789819376026,
+      "yield_fraction": 0.7,
+      "recall": 0.6494252873563219,
+      "FPR": 0.2841087297438578,
+      "FNR": 0.3505747126436781,
+      "precision": 0.09416666666666666,
+      "accuracy": 0.713,
+      "flips_caught": 113,
+      "flips_total": 174
+    }
+  },
+  "fit_rows": 10500,
+  "heldout_rows": 4500,
+  "reported_leaderboard": {
+    "suppression": 0.47,
+    "points": 6.8,
+    "source": "team screenshot"
+  }
+}

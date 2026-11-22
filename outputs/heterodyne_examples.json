@@ -1,0 +1,20 @@
+[
+  {
+    "case": "no_flip",
+    "seed": 1000,
+    "pneg": 0.07181146861910614,
+    "label": 0,
+    "dt": 0.0005,
+    "N": 24,
+    "information": "buffer-only conditioned SME"
+  },
+  {
+    "case": "flip",
+    "seed": 1008,
+    "pneg": 0.12367517920051524,
+    "label": 1,
+    "dt": 0.0005,
+    "N": 24,
+    "information": "buffer-only conditioned SME"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "row": 6406,
+    "label": 1,
+    "nbar": 2.0,
+    "candidate_time": 49.5,
+    "Omega": 2.6495093885472456,
+    "gamma": 1.0099999999999998,
+    "nearest_DFT_frequency": 2.748893571891069,
+    "I_power_at_nearest_bin": 2.5582210926775653,
+    "Q_power_at_nearest_bin": 0.5393750877794175
+  },
+  {
+    "row": 1523,
+    "label": 0,
+    "nbar": 2.0,
+    "candidate_time": 86.0,
+    "Omega": 2.6495093885472456,
+    "gamma": 1.0099999999999998,
+    "nearest_DFT_frequency": 2.748893571891069,
+    "I_power_at_nearest_bin": 0.3894259008216405,
+    "Q_power_at_nearest_bin": 0.3340723150540237
+  }
+]

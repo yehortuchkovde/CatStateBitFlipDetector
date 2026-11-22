@@ -1,0 +1,127 @@
+{
+  "source_version": "v1.0.0",
+  "retrieved": "2026-11-22",
+  "license": "MIT",
+  "license_evidence": "Both Aqora pages declare https://spdx.org/licenses/MIT.html in their public Dataset structured metadata.",
+  "sources": {
+    "A": "https://aqora.io/datasets/Alice_Bob/catch-the-flip-tier-a",
+    "B": "https://aqora.io/datasets/Alice_Bob/catch-the-flip-tier-b"
+  },
+  "copyright_notice": "Copyright (c) 2026 Alice & Bob",
+  "files": {
+    "tierA_train.npz": {
+      "segments": 30000,
+      "bytes": 3590820,
+      "archive_sha256": "fd299109d8b4bbd04103798beab38403167b929e06094305d07218bec387bcb5",
+      "content_sha256": "789ab5c7c98e43687e952b0107b344bd4d7825cdb74a1b10a3a1cf19cf063971",
+      "metadata": {
+        "tier": "A",
+        "T_seg": 200.0,
+        "eta": 0.8,
+        "dark_rate": 0.02,
+        "cat_sizes": [
+          2.0,
+          2.5,
+          3.0,
+          3.5
+        ],
+        "n": 30000
+      }
+    },
+    "tierA_val.npz": {
+      "segments": 15000,
+      "bytes": 2057069,
+      "archive_sha256": "afb465e63cb4abbdcdccc1d8ae458575cedb3f74a97e154031163b83fc98a28c",
+      "content_sha256": "9cc17a6b2e82e8a6a0ca36a4ae4e2aa68cbf60e7970f7ded45525fc44474cf1e",
+      "metadata": {
+        "tier": "A",
+        "T_seg": 200.0,
+        "eta": 0.8,
+        "dark_rate": 0.02,
+        "cat_sizes": [
+          2.0,
+          2.5,
+          3.0,
+          3.5
+        ],
+        "n": 15000
+      }
+    },
+    "tierA_test.npz": {
+      "segments": 30000,
+      "bytes": 4110110,
+      "archive_sha256": "de65006434c70fa9991b87dba1943612e5faf5d156cc14cb7a55621f0c665f4e",
+      "content_sha256": "923386d96099f5dbcb85f7535be9dd4a1b48da775fe025f041d5f0ba802cf40c",
+      "metadata": {
+        "tier": "A",
+        "T_seg": 200.0,
+        "eta": 0.8,
+        "dark_rate": 0.02,
+        "cat_sizes": [
+          2.0,
+          2.5,
+          3.0,
+          3.5
+        ],
+        "n": 30000
+      }
+    },
+    "tierB_train.npz": {
+      "segments": 15000,
+      "bytes": 22149079,
+      "archive_sha256": "c24a592b9ea26e8da423a2f88d9e98500e596dc4e7ed54ec273f19bb12da6b92",
+      "content_sha256": "119b380890ba42f2c455b8056f7850315fc1f181d8feabdcca1c1118403ded8f",
+      "metadata": {
+        "tier": "B",
+        "T_seg": 200.0,
+        "eta": 1.0,
+        "n_bins": 400,
+        "cat_sizes": [
+          2.0,
+          2.5,
+          3.0,
+          3.5
+        ],
+        "n": 15000
+      }
+    },
+    "tierB_val.npz": {
+      "segments": 7500,
+      "bytes": 11074199,
+      "archive_sha256": "024c77ba0489917e6799695ce23b357a56c7747a5f88624a87e8cd310f1a2dcb",
+      "content_sha256": "f26b841bf467e9a94b95bafba731af2109b1dcf05e2ed41a662afcaee0f281f6",
+      "metadata": {
+        "tier": "B",
+        "T_seg": 200.0,
+        "eta": 1.0,
+        "n_bins": 400,
+        "cat_sizes": [
+          2.0,
+          2.5,
+          3.0,
+          3.5
+        ],
+        "n": 7500
+      }
+    },
+    "tierB_test.npz": {
+      "segments": 22500,
+      "bytes": 33217876,
+      "archive_sha256": "6e4cb148fea156cc9e9cb9d4cb86d1459f13275ce5f9c9589713a41d4e1ded98",
+      "content_sha256": "a8258627b62dfa014ffc7705e88979c13b67e9a43da31239aa709255d2c5eb18",
+      "metadata": {
+        "tier": "B",
+        "T_seg": 200.0,
+        "eta": 1.0,
+        "n_bins": 400,
+        "cat_sizes": [
+          2.0,
+          2.5,
+          3.0,
+          3.5
+        ],
+        "n": 22500
+      }
+    }
+  }
+}

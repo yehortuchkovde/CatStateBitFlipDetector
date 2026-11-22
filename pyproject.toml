@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cat-state-bit-flip-detector"
+version = "0.1.0"
+description = "Linear-response theory and Fourier witnesses of dissipative cat-qubit bit flips"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE", "src/catchtheflip/LICENSE"]
+authors = [{name = "Yehor Tuchkov"}]
+dependencies = [
+    "numpy==2.5.5",
+    "scipy==1.18.1",
+    "matplotlib==3.11.2",
+    "jax==0.12.1",
+    "dynamiqs==0.3.7",
+]
+
+[project.optional-dependencies]
+cuda = ["jax[cuda13]==0.12.1"]
+download = ["aqora[pyarrow]>=0.39"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["catflip*", "catchtheflip*"]
+
+[tool.setuptools.package-data]
+catchtheflip = ["LICENSE", "README.md"]

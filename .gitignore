@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.DS_Store
+.env
+outputs/*
+!outputs/calibration.json
+!outputs/metrics.json
+!outputs/ensemble_spectra.json
+!outputs/trajectory_examples.json
+!outputs/linear_response.json
+!outputs/counting_examples.json
+!outputs/heterodyne_examples.json
