@@ -46,6 +46,29 @@ The imaginary buffer response appears in $I(t)$; a radial excursion can also pro
 
 This controlled full-Lindblad calculation checks the proposed ring-down against a known two-mode device, rather than fitting a sinusoid to whichever data look oscillatory. Finite-cat nonlinear dynamics produce visible deviations from the linear approximation; numerical relative RMS errors are saved with the plot.
 
+## A stochastic flip in phase space
+
+The plot and animation below follow **the same simulated trajectory**, from the
+$+\alpha$ lobe to the $-\alpha$ lobe, with the buffer clicks sampled in that run.
+The shaded interval in the full trace is the interval animated below; the moving
+cursor synchronizes the state, Wigner function, and photon-emission record.
+
+![Stochastic cat-state trajectory and its sampled buffer clicks](figures/stochastic_trajectory.png)
+
+![Wigner function synchronized with the state trajectory and buffer clicks](figures/wigner_transition.gif)
+
+This is a known nominal-device example (`nbar=2`, seed 7), selected to illustrate
+one resolved flip, not to estimate a flip rate or prove the frequency claim.
+The Wigner frames are calculated from the actual saved quantum state: they can
+split and develop interference fringes rather than remain a rigid Gaussian blob.
+For a localized full-state trajectory, this visualization uses an equivalent
+displaced-counting measurement of the normally unobserved memory-loss output;
+the underlying Lindblad generator and buffer-counting channel are unchanged.
+The full state is privileged simulator information, not something recoverable
+from buffer clicks alone; see [measurement choice and reproduction details](docs/wigner_demo.md).
+Regenerate just these figures with `uv run python main.py --wigner-only`
+(or `uv run --extra cuda python main.py --wigner-only` for the GPU environment).
+
 ## What the records show
 
 The supplied records are **physics-based stochastic simulations**, not laboratory
@@ -56,11 +79,42 @@ the actual flip time**. The examples are illustrative, not a significance test.
 
 ![Original example records and longer-window spectral inspection](figures/record_examples.png)
 
-The [ensemble spectra](figures/ensemble_spectra.png) include every validation
-trajectory, separated by cat size and final label, with Q as a control. They do
-**not establish a clean population-wide peak at the assumed hidden-device
-frequency**. A resolved theoretical response, a feature in a selected noisy
-record, and useful flip discrimination are three different pieces of evidence.
+### Spectra at state-timed transitions
+
+Final readout labels cannot locate flips within the supplied records, so the
+spectra below use a **separate, known two-mode simulation**: 100 trajectories of
+800 time units at $\bar n=2$, $\kappa_b=4$, $K=0$, with ideal buffer detection.
+Transitions are defined using the simulated $\langle Z\rangle$, never I/Q power:
+opposite $|\langle Z\rangle|\geq0.8$ plateaus must each last at least one time unit.
+Between them, the largest directed Z change over 0.5 units sets the window center.
+This is an operational state-based timing rule, not an experimental timestamp.
+
+![Logical-state transitions and the measured I record, aligned using Z alone](figures/simulated_event_alignment.png)
+
+We take **100 isolated transition windows and 100 matched no-transition windows**
+from 74 contributing histories, cycling through trajectory IDs before reusing a
+history. Controls come from the same history and starting logical side; neither
+cohort is filtered for an attractive I/Q waveform. Only Z is direction-normalized
+in the alignment plot; the measured quadratures are not sign-flipped.
+
+![Average measured spectra around state-defined transitions, with predicted Omega marked](figures/simulated_event_spectra.png)
+
+Each curve averages **local spectra around the selected moments**, not spectra of entire flip-labelled trajectories. Fixed 3-, 4- and 16-bin windows use the challenge bin width 0.5; their means are subtracted before Fourier projection.
+The dotted vertical line marks **predicted $\Omega=2.65$ on the frequency axis**;
+the y-axis is power, so a horizontal line at Omega would mix different units.
+Dots mark actual DFT bins: a smooth projection curve does not create frequency resolution from three or four samples. Bands are pointwise 95% paired bootstrap intervals, resampling whole contributing histories (2,000 resamples), including all event/control pairs from a resampled history together.
+
+At the characteristic frequency $\Omega$ one can see that yes-flip events have higher Fourier amplitude than no-flip events.
+This is the key evidence for the amplitude being a reasonable herald of flip events.
+Moreover, for the time windows of the time length $\approx 2\pi / \Omega$
+ we get that the Fourier amplitude at $\Omega$ is the highest amplitude in the spectrum!
+
+Replot the bundled measured windows with `uv run python main.py --event-study`.
+To regenerate all histories, use `uv run --extra cuda python main.py --resimulate-events`
+(or omit `--extra cuda` for CPU). The documented double-precision CPU run took
+18.4 minutes; plotting the bundled windows takes seconds. Parameters, selection
+rules, limitations and saved arrays are described in [the event-study notes](docs/event_study.md);
+[all numerical spectra and intervals](outputs/simulated_event_study.json) are retained.
 
 ## The submitted detector
 
